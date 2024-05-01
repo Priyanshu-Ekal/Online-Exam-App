@@ -1,0 +1,9 @@
+nav{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    display: inline-flex;
+    color: white;
+    padding: 20px;
+}

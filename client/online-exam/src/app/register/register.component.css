@@ -1,0 +1,8 @@
+form, p{
+    text-align: center;
+}
+table, tr, td, th{
+    text-align: center;
+    margin: 0px auto;
+    border: 1px solid black;
+}

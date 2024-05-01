@@ -1,0 +1,33 @@
+<p>register works!</p>
+
+<html>
+    <body>
+        <form action="">
+            <input type="username" name="username" [(ngModel)]="user.username" placeholder="username"> <br>
+            <input type="password" name="password" [(ngModel)]="user.password" placeholder="password"> <br>
+            <input type="number" name="mobile" [(ngModel)]="user.mobno" placeholder="mobile"> <br>
+            <input type="email" name="emailid" [(ngModel)]="user.emailid" placeholder="emailid"> <br>
+            <input type="button" value="register" (click)="saveUser()"> 
+            <input type="button" value="update" (click)="updateUser()">
+            <input type="button" value="viewUser" (click)="getUser()">
+            <input type="button" value="delete" (click)="deleteUser()">
+            <input type="button" value="viewAll" (click)="getAllUsers()">
+        </form>
+        <p>User List</p>
+        <table>
+            <tr *ngIf="show">
+                <th>username</th>
+                <th>password</th>
+                <th>mobile</th>
+                <th>emailid</th>
+            </tr>
+        
+            <tr *ngFor="let user of users">
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.mobno}}</td>
+                <td>{{user.emailid}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

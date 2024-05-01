@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <span>{{message}}</span>
+        <form action="">
+            <input type="text" name="username" [(ngModel)]="user.username" placeholder="Username"><br>
+            <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password"><br>
+            <select name="subject" [(ngModel)]="subject">
+                    <option *ngFor="let subjectName of subjects" value="{{subjectName}}">{{subjectName}}</option>
+            </select>
+
+            <input type="submit" value="login" (click)="validate()">
+            <input type="button" value="Admin Login" (click)="validate2()">
+        </form>
+    </body>
+</html>
